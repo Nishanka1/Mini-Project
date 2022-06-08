@@ -67,6 +67,10 @@ display: inline;
     color: rgb(204, 24, 24);
     
   }
+
+  input[type=Submit]{
+      padding-left: 20px;
+  }
        </style>
 
 </head>
@@ -83,22 +87,25 @@ display: inline;
         <a href="student_grievance.html"> Student</a>
    &ensp;&emsp14;&emsp14;
    <a href="student_grievance_admin.html"> Admin</a>
+
    &ensp;&emsp14;&emsp14;
    <a href="#"> Feedback</a>
 </nav>
-<form action="backend.php" method="post">
+<form action="backend_admin.php" method="post">
 
     <div class="loginpage" >
         
         <!-- <p >&ensp;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;USERNAME</p> -->
         <p >USERNAME</p>
-       <input type="text" name="username" >
+       <input type="text" Name="username">
+
        <p >PASSWORD</p>
-       <input type="text" name="password">
+       <input type="text" Name="password">
        <br><br>
        
-       &ensp;&emsp14;&emsp14;&emsp14;  <input type="submit" value="Login" Name="login">
-       <input type="submit" value="sign up" Name="signup">
+       &ensp;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+         <input type="submit" value="Login" Name="login" id="login">
+     
     </div>
 
 </form>

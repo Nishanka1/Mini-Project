@@ -1,0 +1,92 @@
+
+<?php
+$conn = new mysqli("localhost", "root", "","crud") or die("Connection Failed");
+
+
+if(isset($_POST['submits'])){
+ 
+    $crud_rollno=$_POST["rollno"];
+    $crud_number=$_POST["number"];
+    $crud_myText=$_POST["myText"];
+$sql="INSERT INTO grievance(rollno,contactno,text) Values('{$crud_rollno}','{$crud_number}','{$crud_myText}')";
+$result=mysqli_query($conn,$sql) or die("Connection Failed");
+}
+echo "COMPLAINT REGISTERED SUCCESSFULLY!";
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 299px;
+        width: 291px;
+        border: solid 20px rgb(59, 101, 149);
+        margin-left: 510px;
+        margin-right: 600px;
+        margin-top: 50px;
+        padding: 90px;
+        background-color: rgb(231, 230, 241);
+      }
+      body {
+        margin-top: 0px;
+      }
+
+      .inputs {
+        margin-bottom: 15px;
+      }
+      .navbar1 {
+        background-color: rgb(0, 0, 0);
+        height: 30px;
+        width: 100%;
+        padding: 5px;
+      }
+      .navbar1 a {
+        color: rgb(236, 235, 235);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(240, 240, 255)">
+    <header class="navbar1">
+      <a href="student_grievance.html"> Home</a> &ensp;&emsp14;
+      <a href="#"> Complaint Status</a>
+    </header>
+    <form action="page2.html" method="post">
+      <div class="box">
+  
+        <div class="inputs">Roll No:<input type="number" name="rollno" /></div>
+
+        <div class="inputs">
+          Contact No:<input type="number" name="number" />
+        </div>
+
+        <div class="inputs">Grievance Details:</div>
+
+        <div class="inputs">
+          <textarea name="myText" cols="40" rows="10"></textarea>
+        </div>
+        <div class="inputs">
+          <input type="submit" value="submit" name="submits" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
